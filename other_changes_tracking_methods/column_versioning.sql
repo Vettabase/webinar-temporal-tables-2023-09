@@ -17,8 +17,8 @@
 */
 
 
-CREATE OR REPLACE SCHEMA data_changes_row;
-USE data_changes_row;
+CREATE OR REPLACE SCHEMA data_changes_column;
+USE data_changes_column;
 
 
 CREATE OR REPLACE TABLE user (
