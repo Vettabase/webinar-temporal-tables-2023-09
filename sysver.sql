@@ -23,12 +23,23 @@ ALTER TABLE product_category
     ADD SYSTEM VERSIONING
 ;
 
+-- automatic partitioning by time
+
+ALTER TABLE t
+    PARTITION BY SYSTEM_TIME
+    INTERVAL 1 MONTH
+    PARTITIONS 12
+;
+
+-- specify a list of partitions manually
+
 ALTER TABLE product_category
     PARTITION BY SYSTEM_TIME (
         PARTITION p_history HISTORY,
         PARTITION p_current CURRENT
     )
 ;
+
 
 SELECT * FROM product_category;
 
