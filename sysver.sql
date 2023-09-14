@@ -25,7 +25,7 @@ ALTER TABLE product_category
 
 -- automatic partitioning by time
 
-ALTER TABLE t
+ALTER TABLE product_category
     PARTITION BY SYSTEM_TIME
     INTERVAL 1 MONTH
     PARTITIONS 12
